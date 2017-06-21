@@ -1,14 +1,28 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+	<ion-navbar>
+		<ion-title>
+			Ionic3 Server Send Test
+		</ion-title>
+	</ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+	<ion-list>
+		<ion-item>
+			<ion-label floating>Username</ion-label>
+			<ion-input type="text" name="username" [(ngModel)]="data.username"></ion-input>
+		</ion-item>
+
+		<button ion-button block (click)="submit()">Submit to server</button>
+	</ion-list>
+
+	<ion-card>
+		<ion-card-header>
+			Response
+		</ion-card-header>
+
+		<ion-card-content>
+			<b>{{data.response}}</b>
+		</ion-card-content>
+	</ion-card>
 </ion-content>
